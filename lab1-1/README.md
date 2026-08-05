@@ -1,4 +1,4 @@
-# Applied Lab 1-1: IDE and Workspace Setup
+# lab1-1: IDE and Workspace Setup
 
 This folder stores evidence that you successfully created and cloned your CIS181 course template.
 
