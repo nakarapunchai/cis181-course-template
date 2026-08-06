@@ -10,7 +10,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -Command "& {
   if ($dialog.ShowDialog() -ne [System.Windows.Forms.DialogResult]::OK) { exit 0 }
   $package = $dialog.FileName
   $name = [IO.Path]::GetFileName($package)
-  $targets = @{ 'lab-S1-3.zip'='lab1-3'; 'lab-S1-4.zip'='lab1-4'; 'lab-S1-5.zip'='lab1-5'; 'lab-S2-1.zip'='lab2-1'; 'lab-S2-2.zip'='lab2-2'; 'lab-S2-3.zip'='lab2-3'; 'lab-S3-1.zip'='lab3-1'; 'lab-S3-2.zip'='lab3-2' }
+  $targets = @{ 'lab-S1-2.zip'='lab1-2'; 'lab-S1-3.zip'='lab1-3'; 'lab-S1-4.zip'='lab1-4'; 'lab-S1-5.zip'='lab1-5'; 'lab-S2-1.zip'='lab2-1'; 'lab-S2-3.zip'='lab2-3'; 'lab-S2-5.zip'='lab2-5'; 'lab-S3-1.zip'='lab3-1'; 'lab-S3-3.zip'='lab3-3' }
   if (-not $targets.ContainsKey($name)) { [System.Windows.Forms.MessageBox]::Show('This is not a CIS181 starter package. Choose a file named lab-Sx-y.zip.', 'CIS181 Installer'); exit 1 }
   $target = $targets[$name]
   $root = '%REPOSITORY_ROOT%'
