@@ -25,17 +25,17 @@ PACKAGE_PATH="$(choose_package 2>/dev/null)" || exit 0
 PACKAGE_NAME="$(basename "$PACKAGE_PATH")"
 
 case "$PACKAGE_NAME" in
-  lab-S1-2.zip) TARGET="lab1-2" ;;
-  lab-S1-3.zip) TARGET="lab1-3" ;;
-  lab-S1-4.zip) TARGET="lab1-4" ;;
-  lab-S1-5.zip) TARGET="lab1-5" ;;
-  lab-S2-1.zip) TARGET="lab2-1" ;;
-  lab-S2-3.zip) TARGET="lab2-3" ;;
-  lab-S2-5.zip) TARGET="lab2-5" ;;
-  lab-S3-1.zip) TARGET="lab3-1" ;;
-  lab-S3-3.zip) TARGET="lab3-3" ;;
+  lab1-2-starter.zip) TARGET="lab1-2" ;;
+  lab1-3-starter.zip) TARGET="lab1-3" ;;
+  lab1-4-starter.zip) TARGET="lab1-4" ;;
+  lab1-5-starter.zip) TARGET="lab1-5" ;;
+  lab2-1-starter.zip) TARGET="lab2-1" ;;
+  lab2-3-starter.zip) TARGET="lab2-3" ;;
+  lab2-5-starter.zip) TARGET="lab2-5" ;;
+  lab3-1-starter.zip) TARGET="lab3-1" ;;
+  lab3-3-starter.zip) TARGET="lab3-3" ;;
   *)
-    show_message "This is not a CIS181 starter package. Please choose a file named lab-Sx-y.zip."
+    show_message "This is not a CIS181 starter package. Please choose a file named lab1-2-starter.zip."
     exit 1
     ;;
 esac
