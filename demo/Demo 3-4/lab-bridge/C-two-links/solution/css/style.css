@@ -1,0 +1,4 @@
+body { max-width: 800px; margin: 30px auto; padding: 20px; font-family: Arial, sans-serif; line-height: 1.5; }
+table { width: 100%; border-collapse: collapse; }
+th, td { padding: 10px; border: 1px solid #748c98; text-align: left; }
+a:focus { outline: 3px solid #a34b00; }

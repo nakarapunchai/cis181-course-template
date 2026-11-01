@@ -11,3 +11,7 @@ repository are provided only for students currently enrolled in CIS181.
 
 You may not copy, distribute, publish, reuse, or adapt any material from this
 repository without the instructor's prior written permission.
+
+## Classroom demonstrations
+
+Use the [current-semester demo files](demo/README.md) for Lesson 2-6 and Unit 3. These additions do not replace the applied labs.

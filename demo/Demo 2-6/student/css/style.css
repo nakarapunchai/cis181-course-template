@@ -1,0 +1,248 @@
+/* Supplied completed 2-5 foundation. Read the four 2-6 tasks below. */
+body {
+    background: #ffffff;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #3d3028;
+    line-height: 1.5;
+    overflow-wrap: anywhere;
+}
+img {
+    object-fit: cover;
+}
+* {
+    box-sizing: border-box;
+}
+.container {
+    width: 92%;
+    margin: 0 auto;
+    max-width: 60rem;
+}
+.page-header {
+    padding: 24px 0;
+}
+.hero {
+    padding-top: 0;
+}
+.hero-copy {
+    padding-bottom: 16px;
+}
+.hall-photo {
+    display: block;
+    width: 100%;
+    height: 500px;
+}
+.section {
+    padding: 40px 0;
+}
+.story {
+    background: #fff0df;
+}
+footer {
+    padding: 20px 0;
+    background: #fff0df;
+}
+.featured-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+}
+.featured-dish {
+    width: auto;
+}
+.dish-photo {
+    display: block;
+    width: 464px;
+    height: 290px;
+}
+.menu-intro {
+    padding-bottom: 8px;
+}
+.menu-stack {
+    display: grid;
+    gap: 24px;
+    padding-bottom: 40px;
+}
+.category-card {
+    padding: 24px;
+    border: 2px solid #d65312;
+    background: #fff8f0;
+}
+.dish-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    align-items: stretch;
+}
+.menu-item {
+    height: auto;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 16px;
+    border: 0;
+    background: #ffffff;
+    min-height: 160px;
+    flex-wrap: wrap;
+}
+.dish-heading {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+.dish-heading h3,
+.dish-heading p {
+    margin: 0;
+}
+.dish-copy {
+    flex: 1;
+    min-width: 0;
+    flex-basis: 12rem;
+}
+.menu-photo {
+    width: 104px;
+    height: 104px;
+    flex-shrink: 0;
+    object-fit: cover;
+}
+.dish-image-link {
+    display: block;
+    flex-shrink: 0;
+}
+.dish-image-link .menu-photo {
+    display: block;
+}
+.dish-image-link:focus {
+    outline: 2px solid #d65312;
+    outline-offset: 3px;
+}
+html {
+    font-size: 16px;
+}
+h1 {
+    font-size: 40px;
+}
+h2 {
+    font-size: 24px;
+}
+h3 {
+    font-size: 20px;
+}
+h1, h2, h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    color: #b4430b;
+    line-height: 1.2;
+}
+.dish-heading p {
+    font-weight: bold;
+}
+.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.nav-list a {
+    display: block;
+    padding: 0.75rem 1rem;
+    color: #3d3028;
+    text-decoration: none;
+}
+.nav-list a:hover {
+    background: #fff4e8;
+}
+.nav-list a:focus {
+    outline: 3px solid #d65312;
+    outline-offset: 3px;
+}
+.nav-list [aria-current="page"] {
+    font-weight: bold;
+    border-bottom: 3px solid currentColor;
+    background: #fff4e8;
+}
+.nav-list a:active {
+    background: #ffd7ad;
+}
+.skip-link {
+    position: absolute;
+    left: -10000px;
+}
+.skip-link:focus {
+    left: 1rem;
+    top: 1rem;
+    background: #ffffff;
+    padding: 1rem;
+}
+img, iframe {
+    max-width: 100%;
+}
+.hall-photo, .dish-photo {
+    width: 100%;
+    height: auto;
+}
+iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+.nav-toggle {
+    display: none;
+    font: inherit;
+    color: #3d3028;
+    background: #fff4e8;
+    border: 1px solid #d65312;
+    padding: 0.75rem 1rem;
+    cursor: pointer;
+}
+.nav-toggle:focus {
+    outline: 3px solid #d65312;
+    outline-offset: 3px;
+}
+
+/* ==================================================
+   LESSON 2-6: RESPONSIVE STYLING
+   Continue from the completed Demo 2-5 above.
+   ================================================== */
+
+/* TODO 1: Wider columns — @media (min-width: 768px)
+   Inside the query, select .featured-row, .dish-grid.
+   Set grid-template-columns: 1fr 1fr;
+
+   Before (completed 2-5): both grids use grid-template-columns: 1fr.
+   Now at 768px and above: grid-template-columns: 1fr 1fr;
+   Below 768px: keep the original one-column rules. */
+
+/* TODO 2: Wider heading — @media (min-width: 768px)
+   Inside the query, select h1 and set font-size: 48px;
+
+   Before: h1 { font-size: 40px; }
+   Now at 768px and above: font-size: 48px;
+   Below 768px: keep the original 40px size. */
+
+/* TODO 3: Mobile hamburger navigation
+   Before: navigation links remain visible and wrap at every width.
+   New narrow-screen rules:
+   .nav-ready .nav-toggle { display: inline-block; }
+   .nav-ready .nav-list { display: none; flex-direction: column; align-items: stretch; }
+   .nav-ready.is-open .nav-list { display: flex; }
+   Then add @media (min-width: 768px):
+   hide .nav-ready .nav-toggle with display: none;
+   show .nav-ready .nav-list with display: flex;
+   restore flex-direction: row; align-items: center;
+   The supplied navigation.js adds .nav-ready and toggles .is-open.
+   Keep the supplied HTML and script. No JavaScript writing task. */
+
+/* TODO 4: Print — @media print
+   Hide nav and .skip-link with display: none;
+   Set body to background: #ffffff; color: #000000;
+   Set h1, h2, h3 to color: #000000;
+   Set .featured-row, .dish-grid to grid-template-columns: 1fr;
+
+   Before: navigation is visible; body text is #3d3028; headings are #b4430b.
+   New for print: hide nav and .skip-link; use black text and headings on white.
+   Print grids: use one column even when a wide-screen query matches.
+   Screen styles stay unchanged. */

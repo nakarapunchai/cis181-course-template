@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>
+            Campus Workshops
+        </title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>
+                Campus Workshops
+            </h1>
+        </header>
+        <main>
+            <h2>
+                Choose a workshop
+            </h2>
+            <p>
+                Practice new skills at one of these fictional campus workshops.
+            </p>
+            <!-- TODO 1: Add thead, tbody, and scope="col" to the existing table. -->
+            <table>
+                <tr>
+                    <th>
+                        Workshop
+                    </th>
+                    <th>
+                        When
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        Resume Workshop
+                    </td>
+                    <td>
+                        December 2, 12:30 p.m.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Transfer Planning
+                    </td>
+                    <td>
+                        December 5, 3 p.m.
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Interview Practice
+                    </td>
+                    <td>
+                        December 9, 1 p.m.
+                    </td>
+                </tr>
+            </table>
+            <h2>
+                Workshop sign-up
+            </h2>
+            <p>
+                Use fictional information when testing this classroom form.
+            </p>
+            <form action="https://httpbin.org/post" method="post">
+                <!-- TODO 2: Match every label to its control. Group Name/Email and Workshop/Format with two fieldsets and legends. -->
+                <p>
+                    <label>
+                        Name:
+                    </label>
+                    <br>
+                    <input id="name" name="name" type="text">
+                </p>
+                <p>
+                    <label>
+                        Email:
+                    </label>
+                    <br>
+                    <input id="email" name="email" type="text">
+                </p>
+                <p>
+                    <label>
+                        Workshop:
+                    </label>
+                    <br>
+                    <select id="workshop" name="workshop">
+                        <option value>
+                            Choose a workshop
+                        </option>
+                        <option value="Resume Workshop">
+                            Resume Workshop
+                        </option>
+                        <option value="Transfer Planning">
+                            Transfer Planning
+                        </option>
+                        <option value="Interview Practice">
+                            Interview Practice
+                        </option>
+                    </select>
+                </p>
+                <p>
+                    Preferred format:
+                </p>
+                <p>
+                    <input id="in-person" name="format" type="radio" value="in-person">
+                    <label>
+                        In person
+                    </label>
+                    <br>
+                    <input id="online" name="format" type="radio" value="online">
+                    <label>
+                        Online
+                    </label>
+                </p>
+                <p>
+                    <label>
+                        What would you like to learn?
+                    </label>
+                    <br>
+                    <textarea id="comments" name="comments" rows="4"></textarea>
+                </p>
+                <p>
+                    <input id="updates" name="updates" type="checkbox">
+                    <label>
+                        Send me workshop updates.
+                    </label>
+                </p>
+                <button type="submit">
+                    Submit practice form
+                </button>
+            </form>
+        </main>
+    </body>
+</html>

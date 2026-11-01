@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <title>
+            Campus Workshops
+        </title>
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <h1>
+                Campus Workshops
+            </h1>
+        </header>
+        <main>
+            <h2>
+                Choose a workshop
+            </h2>
+            <p>
+                Practice new skills at one of these fictional campus workshops.
+            </p>
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">
+                            Workshop
+                        </th>
+                        <th scope="col">
+                            When
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>
+                            Resume Workshop
+                        </td>
+                        <td>
+                            December 2, 12:30 p.m.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Transfer Planning
+                        </td>
+                        <td>
+                            December 5, 3 p.m.
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Interview Practice
+                        </td>
+                        <td>
+                            December 9, 1 p.m.
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2>
+                Workshop sign-up
+            </h2>
+            <p>
+                Use fictional information when testing this classroom form.
+            </p>
+            <form action="https://httpbin.org/post" method="post">
+                <fieldset>
+                    <legend>
+                        Your information
+                    </legend>
+                    <p>
+                        <label for="name">
+                            Name:
+                        </label>
+                        <br>
+                        <input autofocus id="name" name="name" required type="text">
+                    </p>
+                    <p>
+                        <label for="email">
+                            Email:
+                        </label>
+                        <br>
+                        <input id="email" name="email" required type="email">
+                    </p>
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Workshop choice
+                    </legend>
+                    <p>
+                        <label for="workshop">
+                            Workshop:
+                        </label>
+                        <br>
+                        <select id="workshop" name="workshop" required>
+                            <option value>
+                                Choose a workshop
+                            </option>
+                            <option value="Resume Workshop">
+                                Resume Workshop
+                            </option>
+                            <option value="Transfer Planning">
+                                Transfer Planning
+                            </option>
+                            <option value="Interview Practice">
+                                Interview Practice
+                            </option>
+                        </select>
+                    </p>
+                    <p>
+                        Preferred format:
+                    </p>
+                    <p>
+                        <input id="in-person" name="format" required type="radio" value="in-person">
+                        <label for="in-person">
+                            In person
+                        </label>
+                        <br>
+                        <input id="online" name="format" type="radio" value="online">
+                        <label for="online">
+                            Online
+                        </label>
+                    </p>
+                </fieldset>
+                <p>
+                    <label for="comments">
+                        What would you like to learn?
+                    </label>
+                    <br>
+                    <textarea id="comments" name="comments" placeholder="Tell us what you would like to learn." rows="4"></textarea>
+                </p>
+                <p>
+                    <input id="updates" name="updates" type="checkbox">
+                    <label for="updates">
+                        Send me workshop updates.
+                    </label>
+                </p>
+                <button type="submit">
+                    Submit practice form
+                </button>
+            </form>
+        </main>
+    </body>
+</html>

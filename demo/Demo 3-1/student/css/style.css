@@ -1,0 +1,17 @@
+/* Supplied visual foundation. Each demo has its own stylesheet. */
+* { box-sizing: border-box; }
+body { max-width: 900px; margin: 0 auto; padding: 20px; color: #24323c; background: white; font-family: Arial, sans-serif; font-size: 16px; line-height: 1.5; }
+header { padding: 16px; background: #164b63; color: white; }
+main { padding: 16px 0; }
+h1 { font-size: 32px; margin: 0 0 12px; }
+h2 { font-size: 24px; color: #164b63; }
+table { width: 100%; border-collapse: collapse; }
+th, td { border: 1px solid #748c98; padding: 8px; text-align: left; }
+th { background: #edf5f7; }
+form { margin: 20px 0; }
+input, select, textarea, button { max-width: 100%; padding: 7px; font-family: Arial, sans-serif; font-size: 16px; }
+input[type="text"], input[type="email"], select, textarea { width: 100%; max-width: 28em; }
+button { background: #164b63; color: white; border: 1px solid #164b63; }
+#feedback { font-weight: bold; }
+
+/* TODO 3: Add fieldset, legend and visible :focus rules. */
