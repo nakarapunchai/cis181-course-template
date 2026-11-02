@@ -1,15 +1,12 @@
-# Demo 2-6 map
+# 2-6 — Responsive styling map
 
-Completed 2-5 → wider grid → wider heading → HTML mobile menu → mobile CSS → wide override → print.
-
-| Step | Source | Check |
+| Topic | Rule | Evidence |
 | --- | --- | --- |
-| Start | 3 HTML pages + shared CSS + images | Same 2-5 one-column website |
-| Grid | Append min-width: 768px query | .featured-row and .dish-grid: 1fr 1fr |
-| Heading | Append matching query | h1: 48px wide; existing 40px narrow |
-| Mobile HTML | All 3 primary nav sections | details.mobile-nav + summary + copied links; original .desktop-nav |
-| Mobile CSS | Base rules | Hide desktop; pad summary; stack mobile list |
-| Wide CSS | Later 768px query | Hide mobile; display desktop flex |
-| Print | @media print | Hide nav; black text/headings; 1fr grids |
+| Recap 2-5 | Flexible sizing; one-column layout | Home and Menu fit narrow widths |
+| Grid condition | min-width: 768px; 1fr 1fr | Check 767/768/769px and both selectors |
+| Heading condition | h1: 48px inside the width query | 40px narrow, 48px wide |
+| Mobile navigation | details + summary; one displayed alternative | Pointer and keyboard access |
+| Wide navigation | Base hide rule before the wide display override | Full list visible regardless of mobile open state |
+| Print | Hide nav; black text/headings; one column | Actual Home/Menu Print Preview |
 
-Predict → explain → type → save → refresh → test. Check 767/768/769 and 320/375/1280. Test native disclosure with click/Enter/Space/Tab, follow relative links, and inspect Home/Menu Print Preview.
+Diagnostic examples: missing selector comma, unsuitable grid threshold, heading rule outside the condition, and a base hiding rule placed after its wide override. Each example uses only the rules taught in 2-6.

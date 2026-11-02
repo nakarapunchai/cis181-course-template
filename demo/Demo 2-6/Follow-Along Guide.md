@@ -1,81 +1,29 @@
-# Demo 2-6 — Lecture and Walkthrough
+# 2-6 — Responsive Styling
 
-This current-semester demonstration continues the Thai Terrace website from the completed Demo 2-5. The video alternates short explanations with actual cumulative HTML/CSS edits and browser checks. Voice B is used throughout.
+Use viewport conditions to change grid columns, heading size, and navigation. Check print behavior as a separate media condition.
 
-## Start here
-
-1. Extract **Practice Files.zip**.
-2. Keep **starter** unchanged. Make a complete copy named **Working Copy**.
-3. Open that entire working folder in VS Code. Keep its `css/`, `pages/`, and `images/` folders together.
-4. Open `index.html` in your usual browser preview. Use the same working page throughout the lesson.
-5. Keep **solution** and **checkpoints** available for comparison. Each checkpoint is cumulative; do not mix files from different stages.
-
-The starter preserves the completed 2-5 code. It does not supply a hidden menu feature. The new navigation markup is added visibly during the walkthrough. No JavaScript is present in the practice website.
-
-## Follow the same sequence
-
-| Stage | Files to edit | Expected result |
-| --- | --- | --- |
-| Start | None | Flexible 2-5 layout; one-column grids; ordinary navigation |
-| 1 — Grid | `css/style.css` | Two columns from 768px; one below |
-| 2 — Heading | `css/style.css` | h1 is 40px below 768px, 48px from 768px |
-| 3 — Mobile | All three HTML pages, then CSS | Native expandable menu; links stack vertically |
-| 4 — Wide navigation | Same CSS file | Full list replaces mobile details from 768px |
-| 5 — Print | Same CSS file | No navigation; black text/headings; one-column grids |
-
-After each completed group: **Save → Refresh → Test**. Use Command+S on Mac or Control+S on Windows. Keep the earlier completed CSS; append the new lesson below it.
-
-## Navigation structure
-
-The Home page header uses this structure. Copy each inner page's OWN original links when repeating it on Menu and Visit. Inner pages use `../index.html` for Home; keep the correct `aria-current="page"` link in both lists.
-
-```html
-        <nav aria-label="Primary">
-          <details class="mobile-nav">
-            <summary>☰ Menu</summary>
-            <ul class="nav-list">
-              <li><a href="index.html" aria-current="page">Home</a></li>
-              <li><a href="pages/menu.html">Menu</a></li>
-              <li><a href="pages/visit.html">Visit</a></li>
-            </ul>
-          </details>
-          <ul class="nav-list desktop-nav">
-            <li><a href="index.html" aria-current="page">Home</a></li>
-            <li><a href="pages/menu.html">Menu</a></li>
-            <li><a href="pages/visit.html">Visit</a></li>
-          </ul>
-        </nav>
-```
-
-`details` and `summary` provide the native interaction. The browser opens and closes the mobile list. The original list remains the desktop alternative. Update both copies if a destination changes. CSS displays one version at a time. Keep the native focus outline. No Escape-key handler or automatic close/reset behavior is added.
-
-## CSS additions
-
-Append these rules after the completed 2-5 CSS. Do not replace the earlier file with this excerpt.
+## Responsive rules
 
 ```css
-
-/* LESSON 2-6: Responsive styling. Continue from the completed 2-5 file. */
-
-/* 1. Add columns when the viewport is at least 768px wide. */
 @media (min-width: 768px) {
-  .featured-row,
-  .dish-grid {
+  .featured-row, .dish-grid {
     grid-template-columns: 1fr 1fr;
   }
 }
 
-/* 2. Increase the heading only on wider screens. */
 @media (min-width: 768px) {
-  h1 {
-    font-size: 48px;
-  }
+  h1 { font-size: 48px; }
 }
+```
 
-/* 3. Use the native HTML disclosure menu on narrow screens. */
-.desktop-nav {
-  display: none;
-}
+At 767px the grids use one column and h1 is 40px. From 768px, they use two columns and h1 is 48px. The condition includes 768px.
+
+## Mobile navigation
+
+Inside the primary nav, use `details.mobile-nav` with a `summary` control and the page’s three links. Add `desktop-nav` as a second class on the list after details. Retain the page-specific link destinations and current-page marking.
+
+```css
+.desktop-nav { display: none; }
 .mobile-nav summary {
   cursor: pointer;
   padding: 8px 12px;
@@ -84,54 +32,48 @@ Append these rules after the completed 2-5 CSS. Do not replace the earlier file 
   flex-direction: column;
   align-items: flex-start;
 }
-
-/* Keep the full navigation visible on wider screens. */
 @media (min-width: 768px) {
-  .mobile-nav {
-    display: none;
-  }
-  .desktop-nav {
-    display: flex;
-  }
+  .mobile-nav { display: none; }
+  .desktop-nav { display: flex; }
 }
-
-/* 4. Simplify the printed page. */
-@media print {
-  nav,
-  .skip-link {
-    display: none;
-  }
-  body {
-    background: white;
-    color: black;
-  }
-  h1,
-  h2,
-  h3 {
-    color: black;
-  }
-  .featured-row,
-  .dish-grid {
-    grid-template-columns: 1fr;
-  }
-}
-
 ```
 
-## Check the result
+Test click, Enter, Space and Tab. Resize with the disclosure open and closed. At the wide size, the full list must be available in either case.
 
-- Test 767px, 768px, and 769px to verify the exact boundary.
-- Check Home, Menu, and Visit at 320px, 375px, and 1280px as well.
-- Open/close the mobile menu with click, Enter, and Space; Tab through its visible links.
-- Follow Home/Menu/Visit links from every page and check the current-page styling.
-- Resize an open menu to wide and back. Native details may retain its open state on the same page.
-- Look for horizontal overflow, clipped text, and images outside their containers.
-- Open actual Print Preview on Home and Menu with Command+P / Control+P. Check no navigation, black body/headings, and one-column grids, then cancel.
+## Print
 
-The video labels page viewport widths in CSS pixels. Preview images may be enlarged for readability. Browser responsive tools can set exact viewport widths; changing only the window width does not guarantee an exact CSS-pixel value.
+```css
+@media print {
+  nav, .skip-link { display: none; }
+  body { background: #fff; color: #000; }
+  h1, h2, h3 { color: #000; }
+  .featured-row, .dish-grid { grid-template-columns: 1fr; }
+}
+```
 
-Print page counts depend on browser, paper, margins, and settings. The recording shows actual Safari print previews and does not certify identical pagination on every printer. The existing external map embed remains unchanged.
+Inspect Home and Menu in the browser’s Print Preview, then cancel. Verify that navigation is absent, text/headings are black, and both grids use one column.
 
-## When something differs
+## Diagnostic exercises
 
-Check the active working file, save state, refreshed browser address, selector spelling, comma placement, condition, braces, and source order. Compare the first checkpoint where your result differs. The HTML navigation additions are isolated to the primary nav; the earlier CSS is retained as an unchanged prefix.
+Make one controlled change at a time. Predict its effect, inspect the result, explain the cause, and restore the correct rule before continuing.
+
+| Test change | Observe | Repair and verify |
+| --- | --- | --- |
+| Remove the comma between `.featured-row` and `.dish-grid` | At 1280px, neither grid changes to two columns: the descendant relationship matches neither target | Restore the comma; check Home and Menu, then a width below 768px |
+| Change only the grid threshold to 375px | At 375px, Home cards become about 157px wide, despite no horizontal overflow | Restore 768px; compare readable card widths on Home and Menu |
+| Put the 48px h1 rule outside the media query | At 375px, the grid has one column but h1 is already 48px | Enclose h1 in the width query; check h1/grid at 375px and 768px |
+| Move the base `.desktop-nav { display: none; }` rule below the wide query | The mobile disclosure still works at 375px, but both navigation alternatives are hidden at 1280px | Put the base rule before the wide override; test both widths, open/closed states, and keyboard access |
+
+### Card-width reasoning for Home
+
+Home’s container is 92% wide and the featured grid gap is 32px.
+
+- At 375px: container ≈ 345px; two columns receive `(345 − 32) / 2 = 156.5px` each.
+- At 375px with one column: the card receives about 345px.
+- At 768px: container ≈ 706.6px; two columns receive `(706.6 − 32) / 2 ≈ 337.3px` each.
+
+A layout can fit without being easy to read. Use actual card titles, descriptions and images to evaluate the breakpoint. The Menu grid has a different gap and content, so verify it separately.
+
+## Final checks
+
+Test 767px, 768px and 769px; inspect all three pages at narrow/wide widths; confirm usable links and visible keyboard focus; inspect Home/Menu Print Preview. Browser and printer settings can change pagination.
