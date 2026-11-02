@@ -1,5 +1,5 @@
 function buildRepositoryLinks() {
-    // Supplied URL-reading lines. Explain each line before changing the loop.
+    // Values used to build the repository links.
     const owner = window.location.hostname.replace(".github.io", "");
     const repository = window.location.pathname.split("/")[1];
     const placeholders = document.querySelectorAll(".repo-link");

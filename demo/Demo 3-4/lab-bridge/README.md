@@ -9,7 +9,7 @@ The existing Earth Science lab is unchanged. This workshop-themed bridge introdu
 | [C — Two links](C-two-links/student/index.html) | `querySelectorAll` selects two placeholders; a simple `for` loop repeats the same known steps | Locally, with supplied sample values |
 | [D — Published address](D-published-address/student/index.html) | Replace the two sample-value lines with hostname/pathname values | From a project GitHub Pages URL |
 
-Each stage has a separate `student/` and `solution/` folder. Complete one stage before opening the next.
+Each stage has a separate `student/` and `solution/` folder. Each new starter is the previous completed stage, so you can continue in one working copy. Complete one stage before opening the next.
 
 <a href="Address%20Map.png"><img src="Address%20Map.png" alt="Stages from one generated link to repository links from a published address" width="560"></a>
 
@@ -21,7 +21,7 @@ Open the starter `index.html`. Copy all rules from its `style` element to the su
 
 ## B — Create one anchor
 
-The owner and repository strings are supplied for local practice. Find `span#repo-link`. Create an anchor with `document.createElement("a")`, build its `href`, set `textContent`, and use `replaceWith` on that one span. Call `buildOneLink()` after its definition. Preview: only the first row changes; the second row is reserved for Stage C.
+Create `js/links.js` and reference it before `</body>`. Use the public sample owner `nakarapunchai` and repository `cis181-course-template` strings for local practice. Find `span#repo-link`. Create an anchor with `document.createElement("a")`, build its `href`, set `textContent`, and use `replaceWith` on that one span. Call `buildOneLink()` after its definition. Preview: only the first row changes; the second row is reserved for Stage C.
 
 Expected first link: `https://github.com/nakarapunchai/cis181-course-template/tree/main/lab1-4/`.
 

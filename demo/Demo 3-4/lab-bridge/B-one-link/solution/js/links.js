@@ -1,5 +1,5 @@
 function buildOneLink() {
-    // Supplied sample values for local practice.
+    // Values used to build the repository links.
     const owner = "nakarapunchai";
     const repository = "cis181-course-template";
     const placeholder = document.getElementById("repo-link");

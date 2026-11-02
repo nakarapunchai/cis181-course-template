@@ -1,5 +1,3 @@
-# Demo 3-4 Student
+# Demo 3-4 — student
 
-Read the [teaching sequence](../README.md). This is the starting site; complete only the numbered changes.
-
-Test forms with fictional information only.
+Start here. Keep all files together. This code continues the previous completed lesson. Create new files only when the walkthrough introduces them.

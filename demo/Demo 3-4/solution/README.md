@@ -1,5 +1,3 @@
-# Demo 3-4 Solution
+# Demo 3-4 — solution
 
-Read the [teaching sequence](../README.md). This is the completed comparison site.
-
-Test forms with fictional information only.
+Completed reference. Compare with your own working copy. Its code and assets are the next lesson’s starter.

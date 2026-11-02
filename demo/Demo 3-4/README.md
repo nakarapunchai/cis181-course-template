@@ -37,3 +37,7 @@ One short workshop table and one form. No decorative cards, CSS variables, `clam
 This lesson prepares the introductory scripting work for the existing **Applied Lab 3-3**, which assesses Lessons 3-3 and 3-4. The separate 3-4 bridge covers the original repository-link task.
 
 <a href="Structure%20Map.png"><img src="Structure%20Map.png" alt="Demo 3-4 completed structure map" width="560"></a>
+
+## Extended lecture and walkthrough
+
+This version includes guided practice and saved cumulative checkpoints. The downloadable video package includes a detailed guide and checkpoint snapshots. Every main starter continues the preceding completed site.

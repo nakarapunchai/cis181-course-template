@@ -1,7 +1,11 @@
-function buildRepositoryLinks() {
-    // Supplied sample values for local practice.
+function buildOneLink() {
+    // Values used to build the repository links.
     const owner = "nakarapunchai";
     const repository = "cis181-course-template";
-    // Complete the DOM steps described in the teaching guide.
+    const placeholder = document.getElementById("repo-link");
+    const link = document.createElement("a");
+    link.href = "https://github.com/" + owner + "/" + repository + "/tree/main/lab1-4/";
+    link.textContent = "View lab1-4";
+    placeholder.replaceWith(link);
 }
-buildRepositoryLinks();
+buildOneLink();
