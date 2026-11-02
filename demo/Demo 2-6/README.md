@@ -1,34 +1,32 @@
-# Demo 2-6 Responsive Styling
+# Demo 2-6 — Responsive Styling
 
-Current-semester Thai Terrace demo. Continue the completed 2-5 design. The original page content and three-page organization stay. The heading-free welcome group uses `div.hero` rather than an unheaded section; its CSS class and appearance stay the same. The supplied CSS baseline is consolidated, and decorative shadow/rounded-corner/letter-spacing rules are removed so students can find the new work. The four task requirements and supplied navigation helper are retained.
+Continue the completed current-semester Demo 2-5 Thai Terrace website. This demonstration uses HTML and CSS only.
 
-## Four CSS steps
+## Start
 
-1. **Two wider columns:** add `@media (min-width: 768px)` and give `.featured-row, .dish-grid` two `1fr` columns. Preview at 767px and 768px before continuing.
-2. **Wider heading:** at the same breakpoint, change `h1` from 40px to 48px. Change one rule and compare.
-3. **Hamburger navigation:** follow the existing TODO 3 CSS. The button HTML and `js/navigation.js` are supplied. Teach only the visibility/row/column rules students write; use the helper without asking students to reproduce it.
-4. **Print:** hide navigation/skip link, use black text on white, and return the grids to one column in `@media print`.
+Copy the complete `student/` folder to a working folder. Keep the three pages, `css/style.css`, and images together. The initial code is the completed 2-5 layout: flexible sizes, one-column grids, and ordinary navigation. Preserve those earlier rules; append the 2-6 CSS below them.
 
-## Teaching rhythm
+## Teaching sequence
 
-Show the relevant map group, locate the selector, predict one change, edit, save and preview. Stop after each task. Use Home, Menu and Visit to verify the same navigation behavior. Explain 767px/768px/769px with the browser rather than adding more breakpoints.
+1. Explain the media query, then add two grid columns from 768px.
+2. Explain the cascade, then add a 48px h1 override at the same width. Keep the 40px base.
+3. In each HTML document, add native `details`/`summary` inside the primary nav and copy that page's three links inside. Give the original list both `nav-list` and `desktop-nav` classes. Keep paths and current-page labels correct.
+4. Hide the desktop list in the base layout; stack the mobile links. From 768px, hide mobile details and display the original list.
+5. Add `@media print`: hide nav/skip link, use a white body with black text/headings, and return both grids to one column.
 
-## Checkpoints
+Use short explanations followed by live editing, Save, Refresh, and browser checks. The two navigation lists must stay synchronized. The browser supplies details interaction; no helper file, inline handler, Escape behavior, or scripted reset is added.
 
-- Starter: completed 2-5 layout, one column at all widths, visible navigation links.
-- Solution below 768px: one column, Menu button, links reveal on activation.
-- Solution from 768px: two columns where specified, 48px heading, full navigation row.
-- Keyboard: Enter/Space toggle; Escape closes the menu. Hidden links stay out of Tab order. Resize and confirm focus stays usable. These behaviors are supplied by the helper.
-- Print Preview: no navigation; black text/heading on white; one column.
+## Verify
 
-No new HTML/JavaScript writing task, new images, animation, additional breakpoint, or decorative feature is introduced.
+Check all three pages at 320, 375, 767, 768, 769, and 1280px. Test click, Enter, Space, Tab, current-page styling, and actual link destinations. Resize an open menu across the breakpoint and back. Native details can retain its open state on the same page. Inspect actual Home/Menu Print Preview, then cancel.
 
 ## Materials
 
-- [Starter Home](student/index.html)
+- [Starting Home](student/index.html)
 - [Completed Home](solution/index.html)
-- [Original presentation](Lesson%202-6%20Responsive%20Styling.pptx)
-- [Original visual map](Demo%202-6%20Responsive%20Styling%20Map.png)
-- [Original editable map](Demo%202-6%20Responsive%20Styling%20Map.docx)
+- [Matching editable slides](Lesson%202-6%20Responsive%20Styling.pptx)
+- [Matching visual map](Demo%202-6%20Responsive%20Styling%20Map.png)
+- [Editable map and teaching sequence](Demo%202-6%20Responsive%20Styling%20Map.md)
+- [Detailed follow-along guide](Follow-Along%20Guide.md)
 
-The original presentation/map still describe the same four tasks and DOM structure. This cleanup changes the supplied baseline presentation, not the tasks. Applied labs remain unchanged.
+This revision replaces the former consolidated starter and supplied-JavaScript approach. Current-semester labs and other demos remain unchanged.

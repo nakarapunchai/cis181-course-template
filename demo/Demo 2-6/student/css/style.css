@@ -1,248 +1,332 @@
-/* Supplied completed 2-5 foundation. Read the four 2-6 tasks below. */
+/* ==================================================
+   LESSON 2-1: LAYOUT
+   Completed layout from Demo 2-1.
+   ================================================== */
 body {
-    background: #ffffff;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    color: #3d3028;
-    line-height: 1.5;
-    overflow-wrap: anywhere;
+  background: #ffffff;
+  margin: 0;
 }
+/* Images and their dimensions are supplied; media sizing is not today's task. */
 img {
-    object-fit: cover;
+  object-fit: cover;
 }
+/* Completed earlier: Include padding and borders in each declared width. */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
+
+/* Completed earlier: Full-width bands, with a centered desktop content area. */
 .container {
-    width: 92%;
-    margin: 0 auto;
-    max-width: 60rem;
+  width: 960px;
+  margin: 0 auto;
 }
 .page-header {
-    padding: 24px 0;
+  padding: 24px 0;
 }
 .hero {
-    padding-top: 0;
+  padding-top: 0;
 }
 .hero-copy {
-    padding-bottom: 16px;
+  padding-bottom: 16px;
 }
 .hall-photo {
-    display: block;
-    width: 100%;
-    height: 500px;
+  display: block;
+  width: 100%;
+  height: 500px;
 }
 .section {
-    padding: 40px 0;
+  padding: 40px 0;
 }
 .story {
-    background: #fff0df;
+  background: #fff0df;
 }
 footer {
-    padding: 20px 0;
-    background: #fff0df;
+  padding: 20px 0;
+  background: #fff0df;
 }
+
+
+/* Completed earlier: Five featured favorites, one per category, in fixed desktop columns. */
 .featured-row {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 32px;
+  display: grid;
+  grid-template-columns: 464px 464px;
+  gap: 32px;
 }
 .featured-dish {
-    width: auto;
+  width: 464px;
 }
 .dish-photo {
-    display: block;
-    width: 464px;
-    height: 290px;
+  display: block;
+  width: 464px;
+  height: 290px;
 }
+
+/* Completed earlier: Stack category cards; two dish columns inside each category. */
 .menu-intro {
-    padding-bottom: 8px;
+  padding-bottom: 8px;
 }
 .menu-stack {
-    display: grid;
-    gap: 24px;
-    padding-bottom: 40px;
+  display: grid;
+  gap: 24px;
+  padding-bottom: 40px;
 }
 .category-card {
-    padding: 24px;
-    border: 2px solid #d65312;
-    background: #fff8f0;
+  padding: 24px;
+  border: 2px solid #d65312;
+  border-radius: 0;
+  background: #fff8f0;
 }
 .dish-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 16px;
-    align-items: stretch;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  align-items: stretch;
 }
 .menu-item {
-    height: auto;
-    display: flex;
-    align-items: flex-start;
-    gap: 16px;
-    padding: 16px;
-    border: 0;
-    background: #ffffff;
-    min-height: 160px;
-    flex-wrap: wrap;
+  height: 160px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  padding: 16px;
+  border: 0;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 3px 12px rgba(61, 48, 40, 0.12);
 }
 .dish-heading {
-    display: flex;
-    align-items: baseline;
-    gap: 8px;
-    flex-wrap: wrap;
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  flex-wrap: wrap;
 }
 .dish-heading h3,
 .dish-heading p {
-    margin: 0;
+  margin: 0;
 }
+
+/* Optional photo: text fills the card when no photo is present. */
 .dish-copy {
-    flex: 1;
-    min-width: 0;
-    flex-basis: 12rem;
+  flex: 1;
+  min-width: 0;
 }
 .menu-photo {
-    width: 104px;
-    height: 104px;
-    flex-shrink: 0;
-    object-fit: cover;
+  width: 104px;
+  height: 104px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: cover;
 }
+
+/* Open the original photo in a new tab; keep the thumbnail on the right. */
 .dish-image-link {
-    display: block;
-    flex-shrink: 0;
+  display: block;
+  flex-shrink: 0;
 }
 .dish-image-link .menu-photo {
-    display: block;
+  display: block;
 }
 .dish-image-link:focus {
-    outline: 2px solid #d65312;
-    outline-offset: 3px;
-}
-html {
-    font-size: 16px;
-}
-h1 {
-    font-size: 40px;
-}
-h2 {
-    font-size: 24px;
-}
-h3 {
-    font-size: 20px;
-}
-h1, h2, h3 {
-    font-family: Georgia, "Times New Roman", serif;
-    color: #b4430b;
-    line-height: 1.2;
-}
-.dish-heading p {
-    font-weight: bold;
-}
-.nav-list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    align-items: center;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.nav-list a {
-    display: block;
-    padding: 0.75rem 1rem;
-    color: #3d3028;
-    text-decoration: none;
-}
-.nav-list a:hover {
-    background: #fff4e8;
-}
-.nav-list a:focus {
-    outline: 3px solid #d65312;
-    outline-offset: 3px;
-}
-.nav-list [aria-current="page"] {
-    font-weight: bold;
-    border-bottom: 3px solid currentColor;
-    background: #fff4e8;
-}
-.nav-list a:active {
-    background: #ffd7ad;
-}
-.skip-link {
-    position: absolute;
-    left: -10000px;
-}
-.skip-link:focus {
-    left: 1rem;
-    top: 1rem;
-    background: #ffffff;
-    padding: 1rem;
-}
-img, iframe {
-    max-width: 100%;
-}
-.hall-photo, .dish-photo {
-    width: 100%;
-    height: auto;
-}
-iframe {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16 / 9;
-}
-.nav-toggle {
-    display: none;
-    font: inherit;
-    color: #3d3028;
-    background: #fff4e8;
-    border: 1px solid #d65312;
-    padding: 0.75rem 1rem;
-    cursor: pointer;
-}
-.nav-toggle:focus {
-    outline: 3px solid #d65312;
-    outline-offset: 3px;
+  outline: 2px solid #d65312;
+  outline-offset: 3px;
+  border-radius: 8px;
 }
 
 /* ==================================================
-   LESSON 2-6: RESPONSIVE STYLING
-   Continue from the completed Demo 2-5 above.
+   LESSON 2-2: TYPOGRAPHY
+   Completed typography from Demo 2-2.
    ================================================== */
 
-/* TODO 1: Wider columns — @media (min-width: 768px)
-   Inside the query, select .featured-row, .dish-grid.
-   Set grid-template-columns: 1fr 1fr;
+/* Completed earlier: Body text. */
+html {
+  font-size: 16px;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  color: #3d3028;
+  line-height: 1.5;
+}
 
-   Before (completed 2-5): both grids use grid-template-columns: 1fr.
-   Now at 768px and above: grid-template-columns: 1fr 1fr;
-   Below 768px: keep the original one-column rules. */
+/* Completed earlier: Headings. */
+h1 {
+  font-size: 40px;
+}
+h2 {
+  font-size: 24px;
+}
+h3 {
+  font-size: 20px;
+}
+h1, h2, h3 {
+  font-family: Georgia, "Times New Roman", serif;
+  color: #b4430b;
+  line-height: 1.2;
+}
 
-/* TODO 2: Wider heading — @media (min-width: 768px)
-   Inside the query, select h1 and set font-size: 48px;
+/* Completed earlier: Category labels and prices. */
+.featured-dish > p {
+  text-transform: uppercase;
+}
+.dish-heading p {
+  font-weight: bold;
+}
 
-   Before: h1 { font-size: 40px; }
-   Now at 768px and above: font-size: 48px;
-   Below 768px: keep the original 40px size. */
+/* Completed earlier: Room for larger text. */
+.menu-item {
+  height: auto;
+  min-height: 160px;
+}
 
-/* TODO 3: Mobile hamburger navigation
-   Before: navigation links remain visible and wrap at every width.
-   New narrow-screen rules:
-   .nav-ready .nav-toggle { display: inline-block; }
-   .nav-ready .nav-list { display: none; flex-direction: column; align-items: stretch; }
-   .nav-ready.is-open .nav-list { display: flex; }
-   Then add @media (min-width: 768px):
-   hide .nav-ready .nav-toggle with display: none;
-   show .nav-ready .nav-list with display: flex;
-   restore flex-direction: row; align-items: center;
-   The supplied navigation.js adds .nav-ready and toggles .is-open.
-   Keep the supplied HTML and script. No JavaScript writing task. */
+/* ==================================================
+   LESSON 2-4: NAVIGATION STYLING
+   Completed navigation styling from Demo 2-4. Keep these rules.
+   ================================================== */
+/* Completed Lesson 2-4: List layout and reset — .nav-list (completed) */
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+/* Completed Lesson 2-4: Link display and padding — .nav-list a (completed) */
+.nav-list a {
+  display: block;
+  padding: 0.75rem 1rem;
+  color: #3d3028;
+  text-decoration: none;
+}
+/* Completed Lesson 2-4: Hover state — .nav-list a:hover (completed) */
+.nav-list a:hover {
+  background: #fff4e8;
+}
+/* Completed Lesson 2-4: Keyboard focus — .nav-list a:focus (completed) */
+.nav-list a:focus {
+  outline: 3px solid #d65312;
+  outline-offset: 3px;
+}
+/* Completed Lesson 2-4: Current page — .nav-list [aria-current="page"] (completed) */
+.nav-list [aria-current="page"] {
+  font-weight: bold;
+  border-bottom: 3px solid currentColor;
+  background: #fff4e8;
+}
+/* Completed Lesson 2-4: Active press — .nav-list a:active (completed) */
+.nav-list a:active {
+  background: #ffd7ad;
+}
+/* Completed Lesson 2-4: Skip-link position — .skip-link (completed) */
+.skip-link {
+  position: absolute;
+  left: -10000px;
+}
+/* Completed Lesson 2-4: Skip-link focus — .skip-link:focus (completed) */
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  background: #ffffff;
+  padding: 1rem;
+}
 
-/* TODO 4: Print — @media print
-   Hide nav and .skip-link with display: none;
-   Set body to background: #ffffff; color: #000000;
-   Set h1, h2, h3 to color: #000000;
-   Set .featured-row, .dish-grid to grid-template-columns: 1fr;
+/* ==================================================
+   LESSON 2-5: RESPONSIVE DESIGN
+   Completed TODOs 1-10 in the same order as the starter.
+   ================================================== */
 
-   Before: navigation is visible; body text is #3d3028; headings are #b4430b.
-   New for print: hide nav and .skip-link; use black text and headings on white.
-   Print grids: use one column even when a wide-screen query matches.
-   Screen styles stay unchanged. */
+/* TODO 1: Fluid container — .container (completed)
+
+   Before: .container { width: 960px; margin: 0 auto; }
+   Now: width: 92%; max-width: 60rem;
+   Keep: margin: 0 auto still centers the container. */
+.container {
+  width: 92%;
+  max-width: 60rem;
+}
+
+/* TODO 2: Media limits — img, iframe (completed)
+
+   Before: no max-width limit on img or iframe.
+   New: max-width: 100%; limits media to the parent width.
+   This does not force small images to grow. */
+img, iframe {
+  max-width: 100%;
+}
+
+/* TODO 3: Flexible photos — .hall-photo, .dish-photo (completed)
+
+   Before: .hall-photo { width: 100%; height: 500px; }
+   Before: .dish-photo { width: 464px; height: 290px; }
+   Now, both: width: 100%; height: auto;
+   The image files supply their original proportions. */
+.hall-photo, .dish-photo {
+  width: 100%;
+  height: auto;
+}
+
+/* TODO 4: Map frame — iframe (completed)
+
+   Before in HTML: <iframe width="960" height="350" ...>
+   Now in CSS: width: 100%; height: auto; aspect-ratio: 16 / 9;
+   height: auto replaces the fixed 350px height.
+   16 / 9 is a chosen frame ratio, not the original 960 / 350. */
+iframe {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+}
+
+/* TODO 5: Featured grid — .featured-row (completed)
+
+   Before: .featured-row { display: grid; grid-template-columns: 464px 464px; gap: 32px; }
+   Now: grid-template-columns: 1fr;
+   Keep: display: grid and gap: 32px; one column replaces two. */
+.featured-row {
+  grid-template-columns: 1fr;
+}
+
+/* TODO 6: Featured card width — .featured-dish (completed)
+
+   Before: .featured-dish { width: 464px; }
+   Now: width: auto; lets the card fill its grid column. */
+.featured-dish {
+  width: auto;
+}
+
+/* TODO 7: Menu columns — .dish-grid (completed)
+
+   Before: .dish-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+   Now: grid-template-columns: 1fr;
+   Keep: display: grid and gap: 16px. Check pages/menu.html. */
+.dish-grid {
+  grid-template-columns: 1fr;
+}
+
+/* TODO 8: Menu card wrapping — .menu-item (completed)
+
+   Before: .menu-item already uses display: flex; its default is flex-wrap: nowrap.
+   New: flex-wrap: wrap; lets the direct children move to another line.
+   Keep: display: flex; text and thumbnail are the flex items. */
+.menu-item {
+  flex-wrap: wrap;
+}
+
+/* TODO 9: Menu text space — .dish-copy (completed)
+
+   Before: .dish-copy { flex: 1; min-width: 0; }
+   Now: flex-basis: 12rem; changes the starting size supplied by flex: 1.
+   Keep: growing and shrinking are allowed; min-width: 0 still applies.
+   12rem is a starting size, not a minimum width. */
+.dish-copy {
+  flex-basis: 12rem;
+}
+
+/* TODO 10: Long text — body (completed)
+
+   Before: body uses the default overflow-wrap: normal.
+   New: overflow-wrap: anywhere; allows long unbroken text to wrap.
+   This wraps text, not flex items. */
+body {
+  overflow-wrap: anywhere;
+}
+

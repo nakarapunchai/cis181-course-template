@@ -1,349 +1,320 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <!-- Completed Lesson 2-5: viewport. -->
-        <meta content="width=device-width, initial-scale=1" name="viewport">
-        <title>
-            Menu | Thai Terrace
-        </title>
-        <link href="../images/favicon.svg" rel="icon" type="image/svg+xml">
-        <link href="../css/style.css" rel="stylesheet">
-        <!-- Supplied Lesson 2-6 helper for the Menu button. -->
-        <script defer src="../js/navigation.js">
-        </script>
-    </head>
-    <body>
-        <a class="skip-link" href="#main">
-            Skip to main content
-        </a>
-        <header class="page-header">
-            <div class="container">
-                <h1>
-                    Our menu
-                </h1>
-                <nav aria-label="Primary" class="site-nav">
-                    <button aria-controls="primary-menu" aria-expanded="false" class="nav-toggle" hidden type="button">
-                        <span aria-hidden="true">
-                            ☰
-                        </span>
-                        Menu
-                    </button>
-                    <ul class="nav-list" id="primary-menu">
-                        <li>
-                            <a href="../index.html">
-                                Home
-                            </a>
-                        </li>
-                        <li>
-                            <a aria-current="page" href="menu.html">
-                                Menu
-                            </a>
-                        </li>
-                        <li>
-                            <a href="visit.html">
-                                Visit
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
+  <head>
+    <meta charset="utf-8" />
+    <!-- TODO 1: Viewport (completed) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Menu | Thai Terrace</title>
+    <link rel="icon" type="image/svg+xml" href="../images/favicon.svg" />
+    <link rel="stylesheet" href="../css/style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to main content</a>
+    <header class="page-header">
+      <div class="container">
+        <h1>Our menu</h1>
+        <nav aria-label="Primary">
+          <details class="mobile-nav">
+            <summary>☰ Menu</summary>
+            <ul class="nav-list">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="menu.html" aria-current="page">Menu</a></li>
+              <li><a href="visit.html">Visit</a></li>
+            </ul>
+          </details>
+          <ul class="nav-list desktop-nav">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="menu.html" aria-current="page">Menu</a></li>
+            <li><a href="visit.html">Visit</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main id="main" class="container menu-stack">
+      <div class="menu-intro">
+        <p>Thai Terrace</p>
+        <p>
+          Start with something to share, choose your favorite, and finish with a
+          sweet treat.
+        </p>
+        <p><a href="#desserts">Jump to desserts</a></p>
+      </div>
+      <section class="category-card">
+        <h2>Appetizers</h2>
+        <div class="dish-grid">
+          <div class="menu-item">
+            <div class="dish-copy">
+              <div class="dish-heading">
+                <h3>Vegetable Spring Rolls</h3>
+                <p>$8</p>
+              </div>
+              <p>
+                Crispy rolls filled with cabbage, carrots, and glass noodles,
+                served with sweet chili sauce.
+              </p>
             </div>
-        </header>
-        <main class="container menu-stack" id="main">
-            <div class="menu-intro">
-                <p>
-                    Thai Terrace
-                </p>
-                <p>
-                    Start with something to share, choose your favorite, and finish with a
-                                        sweet treat.
-                </p>
-                <p>
-                    <a href="#desserts">
-                        Jump to desserts
-                    </a>
-                </p>
+          </div>
+          <div class="menu-item">
+            <div class="dish-copy">
+              <div class="dish-heading">
+                <h3>Chicken Satay</h3>
+                <p>$10</p>
+              </div>
+              <p>
+                Grilled chicken skewers served with peanut sauce and cucumber
+                relish.
+              </p>
             </div>
-            <section class="category-card">
-                <h2>
-                    Appetizers
-                </h2>
-                <div class="dish-grid">
-                    <div class="menu-item">
-                        <div class="dish-copy">
-                            <div class="dish-heading">
-                                <h3>
-                                    Vegetable Spring Rolls
-                                </h3>
-                                <p>
-                                    $8
-                                </p>
-                            </div>
-                            <p>
-                                Crispy rolls filled with cabbage, carrots, and glass noodles,
-                                                                served with sweet chili sauce.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="dish-copy">
-                            <div class="dish-heading">
-                                <h3>
-                                    Chicken Satay
-                                </h3>
-                                <p>
-                                    $10
-                                </p>
-                            </div>
-                            <p>
-                                Grilled chicken skewers served with peanut sauce and cucumber
-                                                                relish.
-                            </p>
-                        </div>
-                        <a aria-label="View Chicken Satay full image (opens in a new tab)" class="dish-image-link" href="../images/chicken-satay.png" rel="noopener" target="_blank" title="View Chicken Satay full image (opens in a new tab)">
-                            <img alt="Grilled chicken satay skewers with peanut sauce." class="menu-photo" height="104" src="../images/chicken-satay.png" width="104">
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <div class="dish-copy">
-                            <div class="dish-heading">
-                                <h3>
-                                    Thai Fish Cakes
-                                </h3>
-                                <p>
-                                    $10
-                                </p>
-                            </div>
-                            <p>
-                                Seasoned fish cakes with red curry paste and sliced green beans,
-                                                                served with cucumber relish.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="category-card">
-                <h2>
-                    Salads
-                </h2>
-                <div class="dish-grid">
-                    <div class="menu-item">
-                        <div class="dish-copy">
-                            <div class="dish-heading">
-                                <h3>
-                                    Green Papaya Salad
-                                </h3>
-                                <p>
-                                    $12
-                                </p>
-                            </div>
-                            <p>
-                                Shredded green papaya with tomatoes, green beans, lime dressing,
-                                                                and roasted peanuts.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="dish-copy">
-                            <div class="dish-heading">
-                                <h3>
-                                    Crying Tiger
-                                </h3>
-                                <p>
-                                    $18
-                                </p>
-                            </div>
-                            <p>
-                                Grilled beef, thinly sliced and served with spicy toasted-rice
-                                                                dipping sauce and fresh vegetables.
-                            </p>
-                        </div>
-                        <a aria-label="View Crying Tiger full image (opens in a new tab)" class="dish-image-link" href="../images/crying-tiger.png" rel="noopener" target="_blank" title="View Crying Tiger full image (opens in a new tab)">
-                            <img alt="Sliced grilled beef with dipping sauce." class="menu-photo" height="104" src="../images/crying-tiger.png" width="104">
-                        </a>
-                    </div>
-                </div>
-            </section>
-            <section class="category-card">
-                <h2>
-                    Entr&eacute;es
-                </h2>
-                <div class="dish-grid">
-                    <div class="menu-item">
-                        <div class="dish-copy">
-                            <div class="dish-heading">
-                                <h3>
-                                    Shrimp Pad Thai
-                                </h3>
-                                <p>
-                                    $18
-                                </p>
-                            </div>
-                            <p>
-                                Stir-fried rice noodles with shrimp, egg, bean sprouts, chives,
-                                                                peanuts, and lime.
-                            </p>
-                        </div>
-                        <a aria-label="View Shrimp Pad Thai full image (opens in a new tab)" class="dish-image-link" href="../images/pad-thai.png" rel="noopener" target="_blank" title="View Shrimp Pad Thai full image (opens in a new tab)">
-                            <img alt="Shrimp pad Thai with peanuts and lime." class="menu-photo" height="104" src="../images/pad-thai.png" width="104">
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <div class="dish-copy">
-                            <div class="dish-heading">
-                                <h3>
-                                    Chicken Green Curry
-                                </h3>
-                                <p>
-                                    $19
-                                </p>
-                            </div>
-                            <p>
-                                Chicken and Thai eggplant in green coconut curry with Thai
-                                                                basil, served with jasmine rice.
-                            </p>
-                        </div>
-                        <a aria-label="View Chicken Green Curry full image (opens in a new tab)" class="dish-image-link" href="../images/green-curry.png" rel="noopener" target="_blank" title="View Chicken Green Curry full image (opens in a new tab)">
-                            <img alt="Chicken green curry with jasmine rice." class="menu-photo" height="104" src="../images/green-curry.png" width="104">
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <div class="dish-copy">
-                            <div class="dish-heading">
-                                <h3>
-                                    Basil Chicken
-                                </h3>
-                                <p>
-                                    $17
-                                </p>
-                            </div>
-                            <p>
-                                Stir-fried chicken with Thai basil, chili, and garlic, served
-                                                                with jasmine rice.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="dish-copy">
-                            <div class="dish-heading">
-                                <h3>
-                                    Vegetable Red Curry
-                                </h3>
-                                <p>
-                                    $16
-                                </p>
-                            </div>
-                            <p>
-                                Mixed vegetables and tofu in red coconut curry, served with
-                                                                jasmine rice.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="category-card" id="desserts">
-                <h2>
-                    Desserts
-                </h2>
-                <div class="dish-grid">
-                    <div class="menu-item">
-                        <div class="dish-copy">
-                            <div class="dish-heading">
-                                <h3>
-                                    Mango Sticky Rice
-                                </h3>
-                                <p>
-                                    $9
-                                </p>
-                            </div>
-                            <p>
-                                Sweet coconut sticky rice served with ripe mango.
-                            </p>
-                        </div>
-                        <a aria-label="View Mango Sticky Rice full image (opens in a new tab)" class="dish-image-link" href="../images/mango-sticky-rice.png" rel="noopener" target="_blank" title="View Mango Sticky Rice full image (opens in a new tab)">
-                            <img alt="Mango with coconut sticky rice." class="menu-photo" height="104" src="../images/mango-sticky-rice.png" width="104">
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <div class="dish-copy">
-                            <div class="dish-heading">
-                                <h3>
-                                    Coconut Ice Cream
-                                </h3>
-                                <p>
-                                    $7
-                                </p>
-                            </div>
-                            <p>
-                                Coconut ice cream topped with toasted coconut and roasted
-                                                                peanuts.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            <section class="category-card">
-                <h2>
-                    Drinks
-                </h2>
-                <div class="dish-grid">
-                    <div class="menu-item">
-                        <div class="dish-copy">
-                            <div class="dish-heading">
-                                <h3>
-                                    Thai Iced Tea
-                                </h3>
-                                <p>
-                                    $5
-                                </p>
-                            </div>
-                            <p>
-                                Sweet Thai tea with milk, served over ice.
-                            </p>
-                        </div>
-                        <a aria-label="View Thai Iced Tea full image (opens in a new tab)" class="dish-image-link" href="../images/thai-iced-tea.png" rel="noopener" target="_blank" title="View Thai Iced Tea full image (opens in a new tab)">
-                            <img alt="A glass of Thai iced tea." class="menu-photo" height="104" src="../images/thai-iced-tea.png" width="104">
-                        </a>
-                    </div>
-                    <div class="menu-item">
-                        <div class="dish-copy">
-                            <div class="dish-heading">
-                                <h3>
-                                    Lemongrass Iced Tea
-                                </h3>
-                                <p>
-                                    $4
-                                </p>
-                            </div>
-                            <p>
-                                A refreshing lemongrass infusion served chilled with lime.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="menu-item">
-                        <div class="dish-copy">
-                            <div class="dish-heading">
-                                <h3>
-                                    Thai Iced Coffee
-                                </h3>
-                                <p>
-                                    $5
-                                </p>
-                            </div>
-                            <p>
-                                Strong brewed coffee with sweetened milk, served over ice.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-        </main>
-        <footer>
-            <div class="container">
-                <p>
-                    Thai Terrace &middot; Fictional food stall for classroom practice.
-                </p>
+            <a
+              href="../images/chicken-satay.png"
+              target="_blank"
+              rel="noopener"
+              title="View Chicken Satay full image (opens in a new tab)"
+              aria-label="View Chicken Satay full image (opens in a new tab)"
+              class="dish-image-link"
+              ><img
+                class="menu-photo"
+                src="../images/chicken-satay.png"
+                alt="Grilled chicken satay skewers with peanut sauce."
+                width="104"
+                height="104"
+              />
+            </a>
+          </div>
+          <div class="menu-item">
+            <div class="dish-copy">
+              <div class="dish-heading">
+                <h3>Thai Fish Cakes</h3>
+                <p>$10</p>
+              </div>
+              <p>
+                Seasoned fish cakes with red curry paste and sliced green beans,
+                served with cucumber relish.
+              </p>
             </div>
-        </footer>
-    </body>
+          </div>
+        </div>
+      </section>
+      <section class="category-card">
+        <h2>Salads</h2>
+        <div class="dish-grid">
+          <div class="menu-item">
+            <div class="dish-copy">
+              <div class="dish-heading">
+                <h3>Green Papaya Salad</h3>
+                <p>$12</p>
+              </div>
+              <p>
+                Shredded green papaya with tomatoes, green beans, lime dressing,
+                and roasted peanuts.
+              </p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="dish-copy">
+              <div class="dish-heading">
+                <h3>Crying Tiger</h3>
+                <p>$18</p>
+              </div>
+              <p>
+                Grilled beef, thinly sliced and served with spicy toasted-rice
+                dipping sauce and fresh vegetables.
+              </p>
+            </div>
+            <a
+              href="../images/crying-tiger.png"
+              target="_blank"
+              rel="noopener"
+              title="View Crying Tiger full image (opens in a new tab)"
+              aria-label="View Crying Tiger full image (opens in a new tab)"
+              class="dish-image-link"
+              ><img
+                class="menu-photo"
+                src="../images/crying-tiger.png"
+                alt="Sliced grilled beef with dipping sauce."
+                width="104"
+                height="104"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="category-card">
+        <h2>Entrées</h2>
+        <div class="dish-grid">
+          <div class="menu-item">
+            <div class="dish-copy">
+              <div class="dish-heading">
+                <h3>Shrimp Pad Thai</h3>
+                <p>$18</p>
+              </div>
+              <p>
+                Stir-fried rice noodles with shrimp, egg, bean sprouts, chives,
+                peanuts, and lime.
+              </p>
+            </div>
+            <a
+              href="../images/pad-thai.png"
+              target="_blank"
+              rel="noopener"
+              title="View Shrimp Pad Thai full image (opens in a new tab)"
+              aria-label="View Shrimp Pad Thai full image (opens in a new tab)"
+              class="dish-image-link"
+              ><img
+                class="menu-photo"
+                src="../images/pad-thai.png"
+                alt="Shrimp pad Thai with peanuts and lime."
+                width="104"
+                height="104"
+              />
+            </a>
+          </div>
+          <div class="menu-item">
+            <div class="dish-copy">
+              <div class="dish-heading">
+                <h3>Chicken Green Curry</h3>
+                <p>$19</p>
+              </div>
+              <p>
+                Chicken and Thai eggplant in green coconut curry with Thai
+                basil, served with jasmine rice.
+              </p>
+            </div>
+            <a
+              href="../images/green-curry.png"
+              target="_blank"
+              rel="noopener"
+              title="View Chicken Green Curry full image (opens in a new tab)"
+              aria-label="View Chicken Green Curry full image (opens in a new tab)"
+              class="dish-image-link"
+              ><img
+                class="menu-photo"
+                src="../images/green-curry.png"
+                alt="Chicken green curry with jasmine rice."
+                width="104"
+                height="104"
+              />
+            </a>
+          </div>
+          <div class="menu-item">
+            <div class="dish-copy">
+              <div class="dish-heading">
+                <h3>Basil Chicken</h3>
+                <p>$17</p>
+              </div>
+              <p>
+                Stir-fried chicken with Thai basil, chili, and garlic, served
+                with jasmine rice.
+              </p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="dish-copy">
+              <div class="dish-heading">
+                <h3>Vegetable Red Curry</h3>
+                <p>$16</p>
+              </div>
+              <p>
+                Mixed vegetables and tofu in red coconut curry, served with
+                jasmine rice.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="category-card" id="desserts">
+        <h2>Desserts</h2>
+        <div class="dish-grid">
+          <div class="menu-item">
+            <div class="dish-copy">
+              <div class="dish-heading">
+                <h3>Mango Sticky Rice</h3>
+                <p>$9</p>
+              </div>
+              <p>Sweet coconut sticky rice served with ripe mango.</p>
+            </div>
+            <a
+              href="../images/mango-sticky-rice.png"
+              target="_blank"
+              rel="noopener"
+              title="View Mango Sticky Rice full image (opens in a new tab)"
+              aria-label="View Mango Sticky Rice full image (opens in a new tab)"
+              class="dish-image-link"
+              ><img
+                class="menu-photo"
+                src="../images/mango-sticky-rice.png"
+                alt="Mango with coconut sticky rice."
+                width="104"
+                height="104"
+              />
+            </a>
+          </div>
+          <div class="menu-item">
+            <div class="dish-copy">
+              <div class="dish-heading">
+                <h3>Coconut Ice Cream</h3>
+                <p>$7</p>
+              </div>
+              <p>
+                Coconut ice cream topped with toasted coconut and roasted
+                peanuts.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="category-card">
+        <h2>Drinks</h2>
+        <div class="dish-grid">
+          <div class="menu-item">
+            <div class="dish-copy">
+              <div class="dish-heading">
+                <h3>Thai Iced Tea</h3>
+                <p>$5</p>
+              </div>
+              <p>Sweet Thai tea with milk, served over ice.</p>
+            </div>
+            <a
+              href="../images/thai-iced-tea.png"
+              target="_blank"
+              rel="noopener"
+              title="View Thai Iced Tea full image (opens in a new tab)"
+              aria-label="View Thai Iced Tea full image (opens in a new tab)"
+              class="dish-image-link"
+              ><img
+                class="menu-photo"
+                src="../images/thai-iced-tea.png"
+                alt="A glass of Thai iced tea."
+                width="104"
+                height="104"
+              />
+            </a>
+          </div>
+          <div class="menu-item">
+            <div class="dish-copy">
+              <div class="dish-heading">
+                <h3>Lemongrass Iced Tea</h3>
+                <p>$4</p>
+              </div>
+              <p>A refreshing lemongrass infusion served chilled with lime.</p>
+            </div>
+          </div>
+          <div class="menu-item">
+            <div class="dish-copy">
+              <div class="dish-heading">
+                <h3>Thai Iced Coffee</h3>
+                <p>$5</p>
+              </div>
+              <p>Strong brewed coffee with sweetened milk, served over ice.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="container">
+        <p>Thai Terrace · Fictional food stall for classroom practice.</p>
+      </div>
+    </footer>
+  </body>
 </html>

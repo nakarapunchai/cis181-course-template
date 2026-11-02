@@ -1,3 +1,5 @@
-# Demo 2-6 Student
+# Demo 2-6 — Starting website
 
-Use the [four-step teaching guide](../README.md). HTML, images, and navigation JavaScript are supplied; complete or compare only the four Lesson 2-6 CSS tasks.
+The code is the completed Demo 2-5 Thai Terrace website. Make a working copy of this entire folder. Add the Demo 2-6 HTML/CSS changes shown in the walkthrough. Do not repeat the completed 2-5 TODOs. The previous lesson's CSS comments remain for continuity.
+
+See the package Follow-Along Guide for the new steps, checkpoints, and tests. There is no JavaScript in this demo.

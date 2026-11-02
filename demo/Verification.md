@@ -1,5 +1,20 @@
 # Current Semester Demo Verification
 
+## Current Demo 2-6 — HTML/CSS-only replacement
+
+- Starts from the completed 2-5 code. The earlier CSS is retained as an unchanged prefix; new 2-6 rules are appended.
+- Only primary navigation markup is extended. Three original links and current-page labels are preserved on all pages. No script files, script elements, or inline handlers are present.
+- Native details/summary provides mobile disclosure. Click, Enter, Space, Tab, cross-page links, and open-menu resizing were checked. No custom Escape or reset behavior is supplied.
+- All three completed pages checked at 320, 375, 767, 768, 769, and 1280px: 18 cases. No horizontal overflow; local images loaded; heading sizes and navigation visibility matched the breakpoint.
+- CSS parsed without errors. Local references and duplicate mobile/desktop destinations checked. Recorded editor files matched the completed reference.
+- Actual Safari Print Preview checked on Home and Menu: no nav, black body/headings, and one-column grids. Exact printer pagination and external map availability are not certified.
+- Matching slides, PNG/Markdown map, and guide updated. Other demos and all existing labs remain unchanged.
+
+## Earlier combined audit — historical record
+
+The record below predates this replacement. Its statements about the old 2-6 JavaScript helper, consolidated CSS, and unavailable Print Preview are superseded by the current checks above. Unit 3 was not rerun or changed for this replacement.
+
+
 - 22 HTML pages and 18 external CSS files pass the local Nu checker with zero errors or warnings.
 - 12 JavaScript files pass syntax checking.
 - Unit 3 has three exact solution-to-next-starter transitions; no previous website content is discarded.
